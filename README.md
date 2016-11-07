@@ -1,3 +1,9 @@
+AIPaaS
+##docker run
+docker run --name myadmin -d -p 54321:80 -e "PMA_ARBITRARY=1" phpmyadmin/phpmyadmin
+
+
+
 # Official phpMyAdmin Docker image
 
 Run phpMyAdmin with Alpine, supervisor, nginx and PHP FPM.
