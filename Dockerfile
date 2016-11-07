@@ -35,6 +35,16 @@ COPY etc /etc/
 COPY run.sh /run.sh
 RUN chmod u+rwx /run.sh
 
+# Copy logo
+COPY logo_left.png /www/themes/pmahomme/img/logo_left.png
+COPY logo_left.png /www/themes/original/img/logo_left.png
+COPY logo_right.png /www/themes/pmahomme/img/logo_right.png
+COPY logo_right.png /www/themes/original/img/logo_right.png
+RUN chmod 666 /www/themes/pmahomme/img/logo_left.png \
+  && chmod 666 /www/themes/original/img/logo_left.png \
+  && chmod 666 /www/themes/pmahomme/img/logo_right.png \
+  && chmod 666 /www/themes/original/img/logo_right.png 
+
 # Add volume for sessions to allow session persistence
 VOLUME /sessions
 
